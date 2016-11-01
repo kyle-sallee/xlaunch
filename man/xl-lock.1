@@ -1,0 +1,39 @@
+.TH xl-lock 1 2015-08-05 20150805 xl-lock
+.SH NAME
+ xl-lock
+.SH COPYRIGHT
+ By Kyle Sallee in 2015 xl-lock was copyrighted.
+.SH DESCRIPTION
+ By xl-lock the screen can be blanked;
+ interaction           can be pass phrase locked;
+ the screen saver      can be activated,
+ and power  save  mode can be activated.
+.SH PARAMETERS
+ By -b or by --blank the  screen  saver     activates.
+ By -d or by --dpms  DPMS suspend mode      activates.
+ By -o or by --off   DPMS off     mode      activates.
+ By -l or by --lock  keyboard and pointer are grabbed.
+ For lock exit
+ the user account pass phrase or
+ the root account pass phrase is required.
+ While locked screen content  is obscured.
+.SH CONSIDERATIONS
+ By SAK; all terminal attached processes are killed.
+ On a multiple user account log in capable computer
+ if the screen is locked and the computer left unattended
+ then by a malicious user account pass phrases can be stolen.
+ Another user can log in.
+ An xl-lock simulation program can be run.
+ Pass phrases can be logged.
+ To ensure that the apparent screen locking program is xl-lock
+ a reliable method does not exist.
+ Log out and SAK before log in is safer.
+.SH EXAMPLES
+ \fBxl-lock -bdl\fR
+.SH AUTHOR
+ Kyle Sallee
+.SH LICENSE
+ In the separate xl.7 manual page the software license is provided.
+.SH SEE ALSO
+.B man 1 xl
+.SH FORKERS

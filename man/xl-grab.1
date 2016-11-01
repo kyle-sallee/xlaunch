@@ -1,0 +1,29 @@
+.TH XL-GRAB 1 2015-08-05 20150805 xl-grab
+.SH NAME
+ xl-grab
+.SH COPYRIGHT
+ By Kyle Sallee in 2015 xl-grab was copyrighted.
+.SH DESCRIPTION
+ By xl-grab program xl-auto is invoked.
+ File ~/.config/xl or file /etc/xl is parsed.
+ Lines that start with scan and specify a key and modifier are grabbed.
+ While the specified modifier keys are depressed
+ when  the specified          key  is  released
+ then program xl-grab              is  invoked.
+.PP
+ By a delegated approach a significant boon become.
+ By xl-grab complexity and memory consumption are minimal.
+ At least one key sequence must be grabbed.
+ To other X11 clients the grabbed key sequence is never reported.
+.PP
+ If a window  manager     process concurrently exists or
+ if a desktop environment process concurrently exists
+ then at most a single key combination conflict must be resolved.
+ By xl-grab at least one key or key with modifiers must be grabbed.
+.SH AUTHOR
+ Kyle Sallee
+.SH LICENSE
+ In the separate xl.7 manual page the software license is provided.
+.SH SEE ALSO
+.B man 1 xl
+.SH FORKERS

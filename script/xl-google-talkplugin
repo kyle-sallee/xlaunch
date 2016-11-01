@@ -1,0 +1,49 @@
+#!/bin/bash
+# In 2015 by Kyle Sallee; xl-google-talkplugin was copyrighted.
+
+#    Google and Kyle Sallee are not affiliated.
+# By Google; google-talkplugin is provied.
+# By Google; a license         is provied.
+# With google-talkplugin only; the license applies.
+# A URL to webpage with a hyperlink that provides the license follows.
+# https://www.google.com/intl/en/policies/terms/
+# By invoking this script; license tacit consent is implied.
+
+# If   /opt/google is not a symbolic link;
+# if   /opt/google does not point to ~/google-talkplugin/google
+# then googletalk will not run.
+# The  /opt/google path appears to be hardcoded.
+
+if
+[ -f ~/.mozilla/plugins/libnpo1d.so ]
+then
+exit 0
+fi
+
+case $HOSTTYPE in
+	x86_64)T=amd64;;
+	*)T=i386;;
+esac
+
+U=https://dl.google.com/linux/direct/
+F=google-talkplugin_current_$T.deb
+D=~/.mozilla/plugins
+mkdir	-p $D
+
+cd	~
+curl	-O	$U$F
+ar 	x	$F				data.tar.gz
+rm	-f	$F
+mkdir	-p	~/google-talkplugin
+tar	-C	~/google-talkplugin	-xf	data.tar.gz
+rm	-f					data.tar.gz
+ln	-s	{../../google-talkplugin/opt/google/talkplugin,$D}/libnpgoogletalk.so
+ln	-s	{../../google-talkplugin/opt/google/talkplugin,$D}/libnpo1d.so
+
+if
+pgrep	firefox	2>/dev/null
+then
+pkill	-9	firefox
+sleep	1
+fi
+firefox	about:plugins	&>/dev/null &

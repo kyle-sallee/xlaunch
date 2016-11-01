@@ -1,0 +1,14 @@
+#!/bin/bash
+# In 2015 by Kyle Sallee copyrighted.
+taskset	-p 3	$$
+xl-sack	-an	larry	-g	640x325+1280+0		--	xl-term
+xl-sack	-an	larry	-g	640x325+1280+0		--	xl-term
+xl-sack	-an	larry	-g	640x325+1280+0		--	xl-term
+xl-sack	-an	moe	-g	640x325+1280+326	--	xl-term
+xl-sack	-an	moe	-g	640x325+1280+326	--	xl-term
+xl-sack	-an	moe	-g	640x325+1280+326	--	xl-term
+xl-sack	-an	curly	-g	640x325+1280+652	--	xl-term
+xl-sack	-an	curly	-g	640x325+1280+652	--	xl-term
+xl-sack	-an	curly	-g	640x325+1280+652	--	xl-term
+xl-geometry		-g	1280x720+0+0	firefox
+xine			-G	138x105+0+975	--loop=shuffle	~/music/work/	&

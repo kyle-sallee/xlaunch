@@ -1,0 +1,30 @@
+#!/bin/bash
+# In 2015 by Kyle Sallee; xl-corefonts was copyrighted.
+
+#    Microsoft Corporation and Kyle Sallee are not affiliated.
+# By Microsoft Corporation; Microsoft TrueType Fonts is provied.
+# By Microsoft Corporation; a license                is provied.
+# Only with                 Microsoft TrueType Fonts; the license applies.
+# A URL to webpage with a hyperlink that provides the license follows.
+# http://www.freedesktop.org/software/fontconfig/webfonts/Licen.TXT
+# By invoking this script; license tacit consent is implied.
+
+sfu="http://superb-dca2.dl.sourceforge.net/project"
+#sfu="http://freefr.dl.sourceforge.net/project"
+
+d="/corefonts/the%20fonts/final/"
+e="32.exe"
+n="andale arial arialb comic courie georgi impact times trebuc verdan wd97vwr webdin"
+
+[ -f ~/.fonts/andalemo.ttf ]&&
+exit 0
+
+mkdir ~/Downloads ~/.fonts ~/trash
+cd    ~/Downloads
+
+for f in $n
+do
+curl -O "$sfu$d$f$e"
+cabextract -L -F \*.ttf -d ~/.fonts/ "$f$e"
+rm -f "$f$e"
+done

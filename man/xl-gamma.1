@@ -1,0 +1,87 @@
+.TH xl-gamma 1 2015-08-05 20150805 xl-gamma
+.SH NAME
+ xl-gamma
+.SH COPYRIGHT
+ By Kyle Sallee in 2015 xl-gamma was copyrighted.
+.SH DESCRIPTION
+ Xorg gamma value is set.
+ New displays tend to be bright.
+ Old displays tend to be dim.
+ Into darkness; as additional palette RGB values slip; obfuscation becomes
+ By a proper gamma setting; into visual perception
+ previously dim RGB values shift.
+.SH PARAMETERS
+ By -i or by --accretion= by a floating point value RGB gamma  increase.
+ By -c or by --calibrate  by pointer button press   RGB gamma  is   set.
+ By -q or by --query      current RGB gamma floating point values print.
+ By -r or by --restore    previously calibrated     RGB gamma     loads.
+ By -s or by --set=       red green and blue gamma float values are set.
+.PP
+ For the set parameter
+ 3 space separated string enclosed floating point values are expected.
+ By calibrate and by restore the file ~/.config/xl-gamma is used.
+.SH INTERACTION
+ During calibration interaction is expected.
+ By any pointer button press calibration completes.
+ By pointer movement the gamma value changes.
+ When the pointer cursor is at the top    a 0.5 gamma value is set.
+ When the pointer cursor is at the bottom a 2.5 gamma value is set.
+ If 2.5 gamma correction does not suffice
+ then the display brightness should be adjusted.
+ At maximum if the display brightness is already set
+ then a new display could be desirable.
+.PP
+ A   display   perpendicular vantage        is desirable.
+ A   desktop   sized window                 is provided.
+ If  excessive then  window modification    is possible.
+ For contrast a perfect white solid boarder is provided.
+ A gray  scale,     a red  scale,
+ a green scale, and a blue scale           are provided.
+ Across scales for each line the brightness should concur.
+.PP
+ Ideal gamma calibration is subjective.
+ For gamma correction selection the gray scale suffices.
+ At scale top; a few black lines may be desirable.
+ Otherwise black can look gray while
+ brighter colors can look bleached.
+.PP
+ If individual red green and blue gamma correction is required
+ then the accretion parameter can be used.
+ Or file ~/.config/xl-gamma   can be edited.
+ However, during interaction
+ the red   gamma correction value
+ the green gamma correction value
+ the blue  gamma correction value all concur.
+.PP
+ When gamma is set;      displays are not adjusted.
+ Rather the data sent to displays is      adjusted.
+ Gamma is always active.
+ Therefore, by gamma adjustment
+ an additional performance deficit does not become.
+ By all windows during an Xorg session the gamma correction is shared.
+ By any process the gamma correction can be altered.
+.PP
+ Can gamma correction make make a display brighter?
+ No.  Display brightness does not change.
+ However, displayed content may seem brighter.
+.PP
+ By gamma can a display be damaged?
+ No.  By gamma correction the display is not adjusted.
+.PP
+ While playing a first person shooter video game;
+ by gamma correction can darkness be mitigated?
+ By gamma correction 2.5 and greater
+ darkness might be mitigated.
+ However, gamma correction provided night vision
+ and cheating are tantamount.
+.SH EXAMPLES
+ \fBxl-gamma -a 0.1\fR
+ \fBxl-gamma -s "1.2 1.2 1.2"\fR
+ \fBxl-gamma -r\fR
+.SH AUTHOR
+ Kyle Sallee
+.SH LICENSE
+ In the separate xl.7 manual page the software license is provided.
+.SH SEE ALSO
+.B man 1 xl
+.SH FORKERS

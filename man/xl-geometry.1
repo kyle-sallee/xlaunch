@@ -1,0 +1,69 @@
+.TH XL-GEOMETRY 1 2015-08-05 20150805 xl-geometry
+.SH NAME
+ xl-geometry
+.SH COPYRIGHT
+ By Kyle Sallee in 2015 xl-geometry was copyrighted.
+.SH DESCRIPTION
+ By xl-geometry a process can be launched.
+ Or a pointer enclosed window can be targeted.
+ When a new window appears or
+ when a target is acquired
+ the window position and size is modified.
+ The xl-geometry process exits.
+.PP
+ For an xl-geometry launched process
+ the exit code is not obtainable.
+ Within a script file xl-geometry can be invoked repeatedly.
+ Background execution is not desirable.
+ If multiple  xl-geometry processes concurrently exist
+ then by each xl-geometry process
+ a new window would be modified.
+.PP
+ If a target is not acquired
+ after a minute's duration
+ the xl-geometry process exits.
+.SH PARAMETERS
+ By -g or by --geometry= the window geometry is specified.
+ By -m or by --modify    program xl-mod      is invoked.
+ By -s or by --skip=     windows are omitted.
+ When an executable file name is not provided skip is useful.
+ Because the pointer enclosed window is targeted.
+.PP
+ By -- xl-geometry parameter completion is indicated.
+ An  executable file name parameters should follow.
+ For the new process;
+ additional parameters can be specified.
+.SH CONSIDERATIONS
+ For  the window size if less than 64x64 is     specified
+ then the window size                    is not modified.
+ If   geometry                           is not specified
+ or   for the x coordinate if -1         is     specified
+ then at the pointer the window          is     positioned.
+ Larger than root window size            is     possible.
+ Negative coordinate placement           is     possible.
+ Beyond root window visibility placement is     possible.
+.PP
+ By the window manager
+ when a new window destination map       is     hijacked
+ and in the root window if the new map does not become
+ then by xl-geometry the new window      is not discovered.
+ By the window manager when windows      are    mapped
+ if window size or window position       is     changed
+ then xl-geometry's changes          can be     mitigated.
+.SH EXAMPLES
+ \fBxl-geometry -g 320x200+640+300 -- xev\fR
+ \fBxl-geometry -g 0x0+640+300     -- xev\fR
+ \fBxl-geometry -g 320x200+-1      -- xev\fB
+ \fBxl-geometry -m                 -- xev\fB
+ \fBxl-geometry                    -- xev\fB
+ \fBxl-geometry -g 1920x1080+0+0\fR
+ \fBxl-geometry -g 1024x768+1920+0\fR
+ \fBsleep 2;\\\fR
+ \fBxl-geometry -g 1920x1080+0+0\fR
+.SH AUTHOR
+ Kyle Sallee
+.SH LICENSE
+ In the separate xl.7 manual page the software license is provided.
+.SH SEE ALSO
+.B man 1 xl
+.SH FORKERS

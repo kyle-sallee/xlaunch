@@ -1,0 +1,30 @@
+#!/bin/bash
+# In 2015 by Kyle Sallee; xl-firefox was copyrighted.
+
+#    Mozilla Foundation and Kyle Sallee are not affiliated.
+# By Mozilla Foundation;    Mozilla Firefox is provied.
+# By Mozilla Foundation; a license          is provied.
+# Only with                 Mozilla Firefox; the license applies.
+# A URL to webpage with a hyperlink that provides the license follows.
+# https://www.mozilla.org/en-US/foundation/licensing/
+# By invoking this script; license tacit consent is implied.
+
+if	[	-f	~/firefox/firefox	]
+then	firefox	about:plugins	&>/dev/null	&
+	exit	0
+fi
+
+rm	-fr	~/firefox-download/
+mkdir		~/firefox-download/
+cd		~/firefox-download/
+case $HOSTTYPE in
+	x86_64)		curl	-C -	-JLO	"https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=en-US"	;;
+	*)		curl	-C -	-JLO	"https://download.mozilla.org/?product=firefox-latest&os=linux32&lang=en-US"	;;
+esac
+
+cd		~
+tar	-xf	~/firefox-download/*
+mkdir	-p	~/bin/
+ln	-s	../firefox/firefox	~/bin/
+
+firefox	about:plugins	&>/dev/null	&

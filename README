@@ -1,0 +1,44 @@
+By Kyle Sallee in 2015 and in 2016; xl is  copyrighted.
+By the following command an  overview  is  provided.	man man/xl.1
+By the following command the license   is  displayed.	man man/xl.7
+By the following command the software  is  installed.	make install
+The    following environment variables are recognized:
+CC; CFLAGS; DESTDIR; LDFLAGS; SUFFIX.
+
+A make program; a C compiler; and a linker are required.
+For linking the following libraries        are required:
+X11; Xext; Xxf86vm; pam.
+
+A Linux file system hierarchy compliant installation     is      provided.
+Directory suffix names, such as the 64 in /usr/lib64/,   are not guessed.
+To the following directories the SUFFIX variable content is      appended:
+/usr/bin; /usr/include; /usr/lib.
+
+The  following files are installed:
+one  configuration;
+few  header;
+many manual page;
+few  bash script;
+one  shared linked library;
+one  shared linked executable mode 04755 named xl-lock;
+many shared linked executable.
+
+If   mode SUID xl-lock is unreasonable
+then both the  xl-lock executable file
+and       the  xl-lock manual page should   be removed.
+By a mode 0755 xl-lock for unlocking
+when invoked by EUID 0 only passwords   can be verified.
+
+Provided that required shared libraries can be discovered
+then any non  standard installation,
+such as in /opt/ or in a /home/ directory,  is possible.
+
+When Xlaunch runs
+if   configuration file ~/.config/xl is not available
+then configuration file      /etc/xl is     read.
+
+And below URLs for useful software are provided:
+coreutils	http://www.gnu.org/software/coreutils
+gcc		http://gcc.gnu.org/
+make		http://www.gnu.org/software/make/
+xorg		http://www.x.org

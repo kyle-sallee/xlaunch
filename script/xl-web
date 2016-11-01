@@ -1,0 +1,3 @@
+#!/bin/bash
+# In 2015 by Kyle Sallee copyrighted.
+taskset	3	xl-geometry	-g	1280x720+0+0	firefox

@@ -1,0 +1,87 @@
+.TH XL-SACK 1 2015-08-05 20150805 xl-sack
+.SH NAME
+ xl-sack
+.SH COPYRIGHT
+ By Kyle Sallee in 2015 xl-sack was copyrighted.
+.SH DESCRIPTION
+ By     a sack  a container window      is provided.
+ To     a sack;   unlimited windows can be delegated.
+ Within a sack  all  window dimensions     concur.
+ When   a sack  is dumped a window   stack becomes.
+.SH INTERACTION
+ By the pointer primary button press in the sack window and
+ by a   key                    press interaction ends.
+.PP
+ By  the pointer primary button press the following can happen.
+ In  any eligible window; the window is adopted.
+ In  the root     window; the sack   is dumped.
+ In  the sack     window; interaction   ends.
+.PP
+ By     the pointer button 4, wheel up, press
+ the    sack content is forward circulated.
+ Except by buttons 1 3 and 4
+ the    sack content is reverse circulated.
+.PP
+ By  the pointer button 3, right button, press
+ the currently displayed sack window         is dismembered.
+ At  the current pointer position the window is placed.
+.PP
+ However, if beneath  the    cursor the sack exists
+ then across the root window the entire sack content is tiled.
+.PP
+ For     an existing sack geometry modification
+ program xl-mod can be used.
+.PP
+ Tabular  software is      useful, yet rare.
+ Tabular  software also    tends   to  crash.
+ By       a sack;  tabular similar functionality becomes.
+ However, the      tabs    are not provided.
+ If       a sack   process can be  crashed
+ then     a window stack           becomes.
+.SH PARAMETERS
+ By -a or --adopt     a program is executed and  is  annexed.
+ By -d or --dump      the sack                   is  dumped.
+ By -g or --geometry= from XxY+W+H the geometry  is  set.
+ By -i or --interact  sack interaction           is  resumed.
+ By -l or --lower     the displayed sack window  is  cycled.
+ By -n or --name      the sack name              is  set.
+ By -r or --raise     the displayed sack window  is  cycled.
+ By -s or --skip      integer number of  windows are ignored.
+.PP
+ If     the pointer   is   within  a         sack
+ then   the name sack name can     be        surmised.
+ For    adoption the  sack name    must be   specified.
+ For    adoption and  interaction  the  sack geometry is required.
+ During sack window creation only; the  sack geometry is set.
+.PP
+ During adoption a 60 second    deadline      exists.
+ If     within     60 seconds a window is not mapped
+ then   the           xl-sack   process       exits.
+.SH EXAMPLES
+ \fBxl-sack -an larry -g 640x325+1280+0 -- xl-term\fR
+.PP
+ From xl-sack parameters
+ to   separate the client program name
+ the  double hyphen, --, is required.
+.SH BUGS
+ Within a sack two windows exist;
+ by     wheel up        button  press
+ by     wheel down      button  press
+ if     the   sack      window  blinks
+ yet    the   displayed content does   not  change
+ then   two   button    press   events were received.
+ The    sack  window    changed twice.
+ A      blink became.
+.PP
+ For    pointer wheel   events
+ if     double  clicks  should be       generated
+ then   the     pointer device properly functions.
+ By     program xl-sack button provided instructions are obeyed.
+ Double presses will    not be regarded as single presses.
+.SH AUTHOR
+ Kyle Sallee
+.SH LICENSE
+ In the separate xl.7 manual page the software license is provided.
+.SH SEE ALSO
+.B man 1 xl
+.SH FORKERS

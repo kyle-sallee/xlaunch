@@ -1,0 +1,53 @@
+.TH XL-START 1 2015-08-05 20150805 xl-start
+.SH NAME
+ xl-start
+.SH COPYRIGHT
+ By Kyle Sallee in 2015 xl-start was copyrighted.
+.SH DESCRIPTION
+ By xl-start an X server and xl-scan are invoked.
+.PP
+.SH PARAMETERS
+ Parameters are not required.
+ However, for the first parameter;
+ a display name, such as :0 or :1, can suffice.
+ If the second parameter is a display name
+ then for the first parameter; an X server name suffices.
+ For a X server name:
+ Xorg; Xvfb; Xfake; Xnest; Xephyr; Xvnc; Xdmx; suffice.
+ Additional X server parameters can be appended.
+ For additional parameter descriptions;
+ /usr/bin/Xorg --help and man Xorg suffice.
+.PP
+ After an Xserver program and xl-scan program are invoked
+ the xl-start process exits.
+.SH EXAMPLES
+.PP
+.B
+ xl-start
+ From :0 To :9 the first available display is selected
+ and Xorg is invoked.
+.PP
+.B
+ xl-start :0
+ With the above command; on display :0; xl starts.
+ An X server process must already exist.
+.PP
+.B
+ xl-start Xorg :0
+ With the above command; on display :0; Xorg and xl start.
+.PP
+.B
+ xl-start Xorg :0 -quiet -wr -s 180 -terminate
+ With the above command; on display :0;
+ with minimal Xorg start message;
+ with white background root window;
+ with 3 hour screen saver time out;
+ with automatic Xorg termination;
+ Xorg and xl start.
+.SH AUTHOR
+ Kyle Sallee
+.SH LICENSE
+ In the separate xl.7 manual page the software license is provided.
+.SH SEE ALSO
+.B man 1 xl
+.SH FORKERS

@@ -1,0 +1,114 @@
+The Liberty License
+
+Cost   is the compliance required:
+for legal attainment     of goods;
+for legal attainment     of services.
+Free   is the antithesis of cost.
+Free   is without cost.
+
+Liberty is the ability to do as one desires.
+Freedom of speech is the ability to express opinions without censorship.
+
+By   a     "freedom of speech" license
+code and   documentation modification liberty,
+with some  exclusions,   is mandatory.
+
+By    a free license;
+without cost acquisition liberty is mandatory.
+
+By   The Liberty License
+both the freedom of   speech and
+without  cost    acquisition are mandatory.
+
+To  the first  and original author only
+license change liberty   is granted.
+By  the first  and original author only
+a   different  license  can be     applied.
+In  a license  change event the    change is retroactive.
+
+A   compatible license does not exist.
+A   different  license can  not be concurrently applied.
+By  another    license;
+the Liberty    License provisions  and exclusions 
+can not be     superseded.
+
+The following liberties are not granted:
+copyright     statement alteration;
+copyright     statement deletion;
+cost          attachment.
+
+The      following  is prohibited:
+barter;  sale;
+bundling with for cost items;
+bundling with for cost services.
+
+Prohibited    cost         attachment   examples follow.
+On    the     following    hosting  is  prohibited:
+on a  fee                  required for acquisition;
+on an email   registration required for acquisition;
+on a  cookie  acceptance   required for acquisition;
+on a  captcha resolution   required for acquisition;
+on a  delay                required for acquisition.
+
+Fee,  personal     information,  tracking information,
+human interaction, and annoyance are cost
+and   are          prohibited.
+
+On    media  such as CD, fixed disk, SSD, etc...
+where barter or purchase is required for acquisition;
+hosting  is  prohibited.
+
+Declaring a media cost only exists is justifiable.
+Yet,        media cost attachment  is prohibited.
+Declaring a shipping and handling cost only exists is justifiable.
+Yet,      a shipping and handling cost attachment  is prohibited.
+
+To attach cost by bundling with a for cost good    is prohibited.
+To attach cost by bundling with a for cost service is prohibited.
+Cost attachment liberty is denied!
+
+Free means free.
+Sold software is not free.
+"Buy one get one free,"  is  a cost attachment gimmick.
+Cost attachment gimmicks are prohibited!
+Common cost attachment gimicks follow:
+donations accepted;
+hat, tee shirt, java mugs,  etc... bundled sale.
+By   explicit   or implicit compensation desire or expectation
+cost is attached.
+
+On  the following hosting  is           allowed:
+Where   on a      compact  disk    in a magazine    jacket,
+without purchase, to all   persons the  acquisition is granted;
+by    a server    where    anonymous    download    is allowed.
+
+For derivative    artwork
+a   separate      and      distinct  name  is  required.
+Appended or prepended      bytes     does  not suffice.
+Among       precursor and  derivative names
+potential   ambiguity must not exist.
+
+Examples    follow.
+For a       progenitor  name      gtk  is used.
+For a       progeny     name      gtk+ is used.
+To  an      uninformed  person    the  names can be confused.
+Therefore   to mitigate ambiguity the  progeny name must differ.
+
+For a       progenitor  name      gtk  is used.
+For a       progeny     name      htk  is used.
+For an      uninformed  person;   ambiguity should not become.
+The         progeny     name      suffices.
+
+For         software artwork derivatives;
+with    the original project
+while   as  few   as eight   adjacent bytes remain
+the     license  can not  be abandoned.
+Towards the byte similarity  count;
+third   party    library     function invocations, and
+third   party    library     variable declaration  do not count.
+
+If   the  license   conditions  are not met
+then all  liberties are denied.
+
+By Kyle Sallee "The Liberty License" was authored.
+In 2016 by Kyle Sallee "The Liberty License" is copyrighted.

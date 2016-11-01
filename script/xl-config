@@ -1,0 +1,8 @@
+#!/bin/bash
+# In 2015 by Kyle Sallee copyrighted.
+if	! [ -f 		~/.config/xl ]
+then	mkdir	-p	~/.config
+cp		/etc/xl	~/.config/xl
+fi
+xlterm	-e	${EDITOR:-nano}	~/.config/xl
+xl-terminate	-r

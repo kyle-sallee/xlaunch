@@ -1,0 +1,157 @@
+.TH XL 5 2015-08-05 20150805 xl
+.SH NAME
+xl
+.SH COPYRIGHT
+ By Kyle Sallee in 2015 xl was copyrighted.
+.SH CONFIGURATION FILES
+ By   file      /etc/xl the default configuration is provided.
+ If   file ~/.config/xl exists
+ then file ~/.config/xl is used.
+ Otherwise file /etc/xl is used.
+.SH CONFIGURATION FILE SYNTAX
+ By program xl-grab the word "grab" prefixed lines  are parsed.
+ The  specified keysym with modifiers only          is grabbed.
+ When pressed   the program xl-sire                 is invoked.
+.PP
+ By program xl-start the program xl-auto            is invoked.
+ By program xl-auto  the word "auto" prefixed lines are executed.
+.PP
+ By program xl-sire an InputOnly window             is created.
+ For each key press; the configuration file         is parsed.
+ If a modifier and key press combination and
+ a word "sire" prefixed line match then the line    is executed.
+.PP
+ A summary follows.
+ By program xl-auto word "auto" lines are unconditionally executed.
+ By program xl-sire word "sire" lines are   conditionally executed.
+ By program xl-grab word "grab" lines are unconditionally grabbed.
+ If an unexpected word begins a line
+ then the line is ignored.
+.PP
+ In file /usr/include/X11/keysymdef.h key names are provided.
+ In the configuration file the XK_ prefix must  be omitted.
+ For keysym name discovery; program xev         is useful.
+.PP
+ Following the keysym modifiers can   be optionally listed.
+ Typically, between 0 and 2 modifiers are common.
+.PP
+ For "sire" lines only
+ following the modifiers a program name       is required.
+ Optionally, program parameters also      can be specified.
+ By a key combination, unlimited programs can be invoked.
+ However, if sequential execution             is required
+ then a script wrapper                    can be specified.
+.PP
+ For "auto" lines a keysym       and modifiers  are not expected.
+ For "grab" lines a program name and parameters are not expected.
+.SH DEFAULT CONFIGURATION
+.B
+ Key                Invoked            Result
+ /                  man 1 xl           this manual page        displays
+ ?                  man 1 xl           this manual page        displays
+ `                  uxterm -rv         a terminal emulator       starts
+ ~                  uxterm -rv         a terminal emulator       starts
+       Tab          uxterm -rv         a terminal emulator       starts
+ Shift Tab          uxterm -rv         a terminal emulator       starts
+ PrtScr             gqview             image       files        display
+ Home               firefox            web         browser       starts
+ up   arrow         amixer             master      volume     increases
+ down arrow         amixer             master      volume     decreases
+ Scroll Lock        xl-gamma           display     gamma      configure
+ key pad 8          xbacklight         display     back light increases
+ key pad 2          xbacklight         display     back light decreases
+ Print              gimp               graphic     editor        starts
+ Insert             xine               multimedia  player          runs
+ c                  xl-config          ~/.config/xl                edit
+ d                  xl-download        firefox and plugins install menu
+ o                  xl-mod             window override flag     toggled
+       space bar    xl-mod             window modify mode       becomes
+ Shift space bar    xl-geometry        next mapped window   is modified
+ Alt   space bar    xl-geometry        next mapped window   is   placed
+         Enter      xl-mod             window size           progresses
+ key pad Enter      xl-sack            window sack mode         becomes
+ End                xl-destroy         window  is closed  or  destroyed
+ Pause              xl-destroy         window     client     terminates
+ Escape             xl-terminate       X server              terminates
+ Page Up            xl-mod             window               is   raised
+ Page Down          xl-mod             window               is  lowered
+ key pad add        xl-tray-sub        into tray the window is    moved
+ key pad sub        xl-tray-add        from tray a   window is    moved
+ key pad PgUp       xl-sack            sack displayed window     cycles
+ key pad PgDn       xl-sack            sack displayed window     cycles
+ Delete             xl-lock                           the screen blanks
+ key pad End        xl-lock                           the screen  locks
+       1            xl-work            1080p work station software runs
+ Shift 1            xl-geometry        to 1920x1080+0+0  window  is set
+ Shift 2            xl-geometry        to 1024x768+1920+0 window is set
+       F1 F2 F3 F4  xl-desk            to desk in pointer window  moves
+ Shift F1 F2 F3 F4  xl-desk            desk, root window content  shift
+ Ctrl  F1 F2 F3 F4  xl-desk            to    root window; desk  empties
+ Alt   F1 F2 F3 F4  xl-desk            from desk to root; windows  move
+.SH KEYSYM KEY NAMES
+ For some keys an unexpected Keysym name exists.
+ For an unshifted tilde the  Keysym name grave is used.
+ For Page Up            the  Keysym name Prior is used.
+ For Page Down          the  Keysym name Next  is used.
+.SH MODIFIER KEY NAMES
+ 0x01	ShiftMask
+ 0x02	LockMask
+ 0x04	ControlMask
+ 0x08	Mod1Mask
+ 0x10	Mod2Mask
+ 0x20	Mod3Mask
+ 0x40	Mod4Mask
+ 0x80	Mod5Mask
+.PP
+ When the Alt  key is pressed Mod1Mask becomes.
+ When the meta key is pressed Mod4Mask becomes.
+ When the num lock LED is lit Mod2Mask becomes.
+ When the cap lock LED is lit LockMask becomes.
+.PP
+ And rather than a modifier
+ by the Scroll Lock key
+ the Scroll_Lock keysym is generated.
+.PP
+ In the above table; for reference only
+ the modifier key values are provided.
+ In the configuration file
+ the modifier key names  only are     specified.
+ Modifier     key values      are not specified.
+.SH TERMINAL EMULATION PROGRAM LAUNCH
+ By the grave key, by the tab key, and by the shifted tab key
+ a terminal emulation program can be launched.
+ However a difference exist.
+ By the grave key a terminal emulation program is launched.
+ By the widow manager or by the program
+ the window placement and size is set.
+ By tab at the pointer position
+ the terminal emulation window is placed.
+ By shifted tab at the pointer position
+ the terminal emulation window is placed and
+ xl-mod is launched.
+ By xl-mod around the root window
+ the terminal emulation window can be shifted.
+ Before windows can be mapped on the root window
+ by the window manager
+ if a window is reparented
+ then by xl-geometry the window can not be placed.
+ If so then tab and shift tab should not be used
+ while grave can be used.
+.SH AT MAP WINDOW MODIFCATION
+ Within the root window during window map
+ by program xl-geometry windows         can be discovered and modified.
+ By launching through xl-geometry eloquence is achieved.
+ However, the exit code                     is sacrificed.
+ Therefore, by shift space xl-geometry  can be invoked.
+ Within a 60 second duration if a window    is mapped
+ then on the window xl-mod                  is invoked.
+ Before xl-geometry listens if the window   is mapped
+ then  the window                  will not be discovered.
+ Until a window is discovered xl-geometry does not exit.
+.SH AUTHOR
+ Kyle Sallee
+.SH LICENSE
+ In the separate xl.7 manual page the software license is provided.
+.SH SEE ALSO
+.B man 1 xl
+.SH FORKERS

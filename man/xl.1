@@ -1,0 +1,265 @@
+.TH XL 1 2015-08-05 20150805 xl
+.SH NAME
+ xl
+.SH COPYRIGHT
+ By Kyle Sallee in 2015 xl was copyrighted.
+.SH DESCRIPTION
+ By Xlaunch software suite; hot key software is provided.
+ By pressing key combos programs are launched.
+.PP
+ By program xl-start program Xorg can be launched and
+ program xl-auto and program xl-grab are launched.
+ By program xl-grab one or more key board key combos are grabbed.
+ When a grabbed key combo is pressed
+ then the program xl-sire is invoked.
+.PP
+ By the program xl-sire an InputOnly window is created.
+ Key combos are read.
+ If a matching key combo is received
+ then relevant programs are launched.
+ Otherwise after 5 seconds;
+ xl- prefixed manual pages are displayed.
+.PP
+ For xl-auto and xl-grab and xl-sire detailed descriptions
+ separate manual pages are provided.
+.PP
+ In the ASCII text file ~/.config/xl or file /etc/xl
+ both key combinations and programs are specified.
+ By the the command \fBman 5 xl\fR
+ both the configuration file format
+ and the default configuration is explained.
+ Without a configuration file
+ Xorg only can be started.
+.PP
+ To compile the software some header files and libraries are required.
+ The following libraries are required: X11; Xext; Xxf86vm; c; pam.
+ By program xl-auto  and xl-lock Xext    is required.
+ By program xl-lock  only        pam     is required.
+ by program xl-gamma only        Xxf86vm is required.
+.PP
+ By Xlaunch; library files are not installed.
+ For program execution
+ the X11 Xext Xxf86vm c and pam shared libraries must load.
+ As a line within file /etc/ld.so.conf or
+ as a colon deliminated directory
+ within the environment variable LD_LIBRARY_CACHE
+ the library location must be specified.
+ If   the file /etc/ld.so.conf is modified
+ then the file ldconfig must be run.
+ Depending upon the C library implementation
+ shared library default directories could exist.
+.PP
+ If one or more required libraries can not load
+ then one or more programs will not execute.
+ As described in the above paragraph
+ the problem is easily fixed.
+ However, by xl2 source code modification
+ the problem can not be fixed.
+ Required libraries not being found is not a bug.
+.PP
+ For Xlaunch a modular design was implemented.
+ For key combination specification
+ a configuration file is used.
+ Consequently, almost any behavior
+ can be modified or replaced.
+ For each xl- prefixed program; a manual page exists.
+.PP
+ If the environment variable DISPLAY exists and
+ if an Xserver process               exists
+ then without program xl-start invocation
+ the program xl-grab  can   be invoked.
+.PP
+ As processes most xl- prefixed programs does not persist.
+ However for the following programs a process persists:
+ xl-desk; xl-focus-explicit; xl-grab; xl-sack.
+ When an empty desk becomes the xl-desk process terminates.
+ When an empty sack becomes the xl-sack process terminates.
+.PP
+ Xlaunch is not a window manager.
+ A separate  window manager      can be concurrently used.
+ A separate  desktop environment can be concurrently used.
+ However, neither are required.
+ Compatibility is not guaranteed.
+.PP
+ By   Xlaunch window modification programs are provided.
+ If   a window manager is used
+ then the window manager provided
+ window modification functions should be used.
+ Each window manager's method window composition method
+ can not be correctly surmised.
+ Window manager incompatibility is not a bug.
+ By window managers; windows can be unexpectedly reparented.
+.PP
+ The following window manager fluff is not provided:
+ animation; audio; control panel; decoration
+ iconification; menus; system tray.
+ By window borders by decoration by iconification
+ by status tray; desktop space is wasted.
+ Xserver and audio entirely differ.
+ To conserve memory
+ as separate programs fluff can be implemented.
+.PP
+ System   tray support is not provided.
+ However, desk support is     implemented.
+ Concurrent unlimited desk are supported.
+ To mitigate root window clutter;
+ to desks and from desks;
+ windows can be moved.
+ If desks are not used
+ then memory is not consumed.
+ While on a desk a window exists;
+ limited interaction only is possible.
+.PP
+ A desk and a sack are similar.
+ However, sack size is adjustable.
+ Within a sack; all windows sizes concur.
+ One window content can be seen.
+ By circulation the visible window can be changed.
+.PP
+ By a sack tabular like interaction is     provided.
+ Window decoration                  is not provided.
+.PP
+ By xl-info; window information     is     displayed.
+.PP
+ If a window's override redirect flag is set
+ then by most xl- prefixed programs
+ the window is not ignored.
+ Xlaunch is not a window manager.
+ Therefore, the override redirect flag is not salient.
+.PP
+ By the xl-desk program
+ the override redirect flagged windows are not annexed.
+ For example; by desks typically unmapped windows are created.
+ For a desk window decoration is not desired.
+ Therefore, for each desk window the override redirect flag is set.
+ If a desk window could be annexed by another desk window
+ then undesirable behavior would become.
+.SH BUGS
+ By a minimal code; efficiency simplicity and stability are achieved.
+.PP
+ By the program xl-focus-explicit
+ program firefox's bugs and
+ program xine-ui's bugs are circumvented.
+ https://bugzilla.mozilla.org/show_bug.cgi?id=671277
+.SH FAQ
+ Q: The activation key was pressed.
+    The hand cursor became.
+    The tab key was pressed.
+    The hand cursor remained.
+    Why did a terminal emulator not launch?
+ A: Before an activation key is pressed; all keys must be released.
+ Q: To lower volume, why are many key sequences required?
+ A: By depressing shift while the down arrow key is pressed
+    then a 10 decibel reduction becomes.
+    By depressing shift while the up   arrow key is pressed
+    then a 10 decibel increase  becomes.
+    If more or less is desired
+    then in file ~/.config/xl exact behavior can be specified.
+ Q: The grab key sequence was pressed.
+    The scan key sequence was pressed.
+    The expected process did not become.
+ A: Perhaps the required software is not installed?
+    By xl-term the program urxvt or the program uxterm can be launched.
+    For program gnome-terminal  support is not provided.
+    For program konsole         support is not provided.
+    For program wtf-console     support is not provided.
+    However, by editing xl-term support can be provided.
+    The required software is installed;
+    by the PATH environment variable
+    if the executable file install directory is not specified
+    then the program can not be located and can not be launched.
+    If ALSA, Advanced Linux Sound Architecture, is not used
+    then pulse or some other audio software can be used.
+    From /etc/ to ~/.config/ file xl can be copied.
+    Then file xl can be modified.
+    By everyone, even the Xlaunch software author,
+    a customized ~/.config/xl file is used.
+    Customization is intended.
+ Q: A key combination was pressed.
+    The expected outcome did not become.
+ A: For a multi key sequence key press sequence is important.
+    First, the state key must be pressed and held.
+    Some state keys follow: Alt, CapsLock, Ctrl, Shift, meta, Num Lock.
+    Then other keys can be pressed:
+    Some other keys follow:
+    function, letter, number, punctuation, symbol.
+    In a key combination multiple state keys can be specified.
+    However, one non state key only          can be specified.
+    If before the Ctrl key; the C key is pressed
+    then a Ctrl C key sequence is not interpreted.
+ Q: Pointer gestures are desired.
+    A hot pointer program is desired.
+ A: While easily implemented, a separate software project is suggested.
+    A mozilla firefox sized desktop environment is not desirable.
+ Q. By xl-mod rather than the desired window
+    the entire desktop moved?
+ A. The root window can not be      moved.
+    The root window         did not move.
+    To simulate a root window
+    by the window manager
+    a root window sized window was created.
+    Then, to that window all other windows were reparented.
+    Obscuring the root window is odd behavior.
+    With that window manager;
+    partial compatibility only is implemented.
+    By any process writing to the root window is possible
+    therefore as the root window;
+    any program, even a web browser, could be implemented.
+    Obscuring the root window is not required.
+ Q. By xl-mod the root window sized
+ A. The root window is not sizable; see the above answer.
+.PP
+ From reading the FAQ, a fact is illuminated.
+ Compared to window manager programs;
+ xl2 interaction differs.
+ A simple implementation is provided.
+.PP
+ If window modification; methods differ
+ then hot key program invocation probably still works.
+.PP
+ Among hot key programs; Xlaunch is the least grabby.
+ Therefore,  xl-sire is easily thwarted.
+ If   the  xl-sire hand cursor      is not seen
+ then the  xl-sire InputOnly window is not visible.
+ Above the xl-sire InputOnly overlay window
+ by the window manager if a window is placed
+ then hot key launching will not work.
+.SH CONSIDERATION
+ By the software author
+ a window manager and a desktop environment are not used.
+ For the Xlaunch recommended experience;
+ bare backing Xorg is recommended.
+.PP
+ By  Xlaunch menus are not provided.
+ The first  time a menu is used; a convenience is provided.
+ The second time a menu is used; a hindrance   is provided.
+ When choices are known by a menu a slow interface is provided.
+.SH AUTHOR
+ Kyle Sallee
+.SH LICENSE
+ In the separate xl.7 manual page the software license is provided.
+.SH SEE ALSO
+ \fB man 1 xl
+  man 5 xl
+  man 7 xl
+  man 1 xl-auto
+  man 1 xl-config
+  man 1 xl-corefonts
+  man 1 xl-desk
+  man 1 xl-destroy
+  man 1 xl-download
+  man 1 xl-firefox
+  man 1 xl-flashplugin
+  man 1 xl-focus-explicit
+  man 1 xl-gamma
+  man 1 xl-geometry
+  man 1 xl-google-talkplugin
+  man 1 xl-grab
+  man 1 xl-lock
+  man 1 xl-mod
+  man 1 xl-sack
+  man 1 xl-sire
+  man 1 xl-start
+  man 1 xl-term
+  man 1 xl-terminate
+.SH FORKERS

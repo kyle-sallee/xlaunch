@@ -1,0 +1,81 @@
+sire	space	Mod1Mask	xl-geometry	-g	0x0+-1	--	true
+sire	space	ShiftMask	xl-geometry	-m		--	true
+sire	space			xl-mod
+sire	Return			xl-mod	-p
+sire	KP_Enter		xl-sack	-i
+sire	grave			xl-term
+sire	Tab			xl-geometry		--	xl-term
+sire	Tab	ShiftMask	xl-geometry	-m	--	xl-term
+sire	End			xl-destroy	-d
+sire	Pause			xl-destroy	-k
+sire	Escape			xl-terminate	-x
+sire	KP_End			xl-lock		-bdl
+sire	Delete			xl-lock		-b
+sire	Home			xl-web
+sire	Up			amixer	-- sset Master playback  1dB+
+sire	Up	ShiftMask	amixer	-- sset Master playback 10dB+
+sire	Down			amixer	-- sset Master playback  1dB-
+sire	Down	ShiftMask	amixer	-- sset Master playback 10dB-
+sire	Prior			xl-mod	-r
+sire	KP_Prior		xl-sack	-r
+sire	Next			xl-mod	-l
+sire	KP_Next			xl-sack	-l
+sire	Print			taskset 1 gqview
+sire	Insert			taskset 3 xine
+sire	Scroll_Lock		xl-gamma	-c
+sire	KP_8			xbacklight	-inc 1
+sire	KP_2			xbacklight	-dec 1
+sire	c			xl-config
+sire	d			xl-term	-e	xl-download
+sire	o			xl-mod	-o
+sire	F1			xl-desk	-an	blinky	-c	0xff0000
+sire	F1	ShiftMask	xl-desk	-fn	blinky	-c	0xff0000
+sire	F1	ControlMask	xl-desk	-dn	blinky
+sire	F1	Mod1Mask	xl-desk	-rn	blinky
+sire	F2			xl-desk	-an	pinky	-c	0xffaaff
+sire	F2	ShiftMask	xl-desk	-fn	pinky	-c	0xffaaff
+sire	F2	ControlMask	xl-desk	-dn	pinky
+sire	F2	Mod1Mask	xl-desk	-rn	pinky
+sire	F3			xl-desk	-an	inky	-c	0xa8ffff
+sire	F3	ShiftMask	xl-desk	-fn	inky	-c	0xa8ffff
+sire	F3	ControlMask	xl-desk	-dn	inky
+sire	F3	Mod1Mask	xl-desk	-rn	inky
+sire	F4			xl-desk	-an	clyde	-c	0xffba2f
+sire	F4	ShiftMask	xl-desk	-fn	clyde	-c	0xffba2f
+sire	F4	ControlMask	xl-desk	-dn	clyde
+sire	F4	Mod1Mask	xl-desk	-rn	clyde
+sire	1	ShiftMask	xl-geometry	-g	0x0+0+0
+sire	2	ShiftMask	xl-geometry	-g	0x0+1920+0
+sire	3	ShiftMask	xl-geometry	-g	1920x1080
+sire	4	ShiftMask	xl-geometry	-g	1280x1024
+sire	5	ShiftMask	xl-geometry	-g	1280x720
+sire	6	ShiftMask	xl-geometry	-g	1024x768
+sire	7	ShiftMask	xl-geometry	-g	800x600
+sire	8	ShiftMask	xl-geometry	-g	640x480
+sire	9	ShiftMask	xl-geometry	-g	320x240
+sire	0	ShiftMask	xl-geometry	-g	320x200
+sire	minus	ShiftMask	xl-geometry	-g	2276x1397+-16+-308
+sire	equal	ShiftMask	xl-geometry	-g	2534x1397+-16+-308
+sire	1			xl-geometry	--	lattice		-x 24
+sire	2			xl-geometry	--	hyperspace	-x 24
+sire	3			xl-geometry	--	hufo_tunnel	-x 24
+sire	4			xl-geometry	--	matrixview	-x 24
+sire	5			xl-geometry	--	pixelcity	-x 24
+sire	6			xl-geometry	--	skyrocket	-x 24
+sire	7			xl-geometry	--	biof		-x 24
+sire	8			xl-geometry	--	flux		-x 24
+sire	0			xl-work
+sire	slash			xl-term	-e	man	/usr/share/man/man*/xl*
+sire	slash	ShiftMask	xl-term	-e	man	/usr/share/man/man*/xl*
+auto				xl-term	-e	man	/usr/share/man/man*/xl*
+;auto				xl-work
+auto				xl-focus-explicit
+auto				xl-gamma	-r
+grab	Super_L
+grab	Menu
+;grab	grave	Mod4Mask
+;grab	grave	Mod1Mask
+;sire	BackSpace		xl-terminate	-r
+;sire	KP_Subtract		xl-terminate	-x
+;sire	Prior	ShiftMask	xl-sack	-r
+;sire	Next	ShiftMask	xl-sack	-l

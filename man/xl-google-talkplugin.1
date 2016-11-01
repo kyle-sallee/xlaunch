@@ -1,0 +1,35 @@
+.TH xl-google-talkplugin 1 2015-08-05 20150805 xl-google-talkplugin
+.SH NAME
+ xl-google-talkplugin
+.SH COPYRIGHT
+ By Kyle Sallee in 2015 xl-google-talkplugin was copyrighted.
+.SH DESCRIPTION
+ The google provided google-talkplugin is downloaded.
+ In directory ~/google-talkplugin/ the software is installed.
+ Symbolic link ~./mozilla/plugins/libnpgoogletalk.so is created.
+ Symbolic link ~/.mozilla/plugins/libnpo1d.so        is created.
+.SH PARAMETERS
+.SH EXAMPLES
+.SH CAVEATS
+ xl-google-talkplugin works exactly as intended.
+ However, if not installed in /opt/google/
+ then google-talkplugin does not work.
+ In google provided pre-compiled libraries
+ hard coded paths exist.
+ Rather than that flawed design
+ in the plugin directory
+ from examining the shared object symbolic links
+ the install location can be deduced.
+ Unfortunately, by google the less than extra 64 bytes required
+ by a readlink function invocation and
+ by a strrchr  function invocation is not yet provided.
+.SH AUTHOR
+ Kyle Sallee
+.SH BUGS
+ Due to host server changes download might not succeed.
+ Due to hard coded path names google talk might not work.
+.SH LICENSE
+ In the separate xl.7 manual page the software license is provided.
+.SH SEE ALSO
+.B man 1 xl
+.SH FORKERS

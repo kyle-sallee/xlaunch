@@ -1,0 +1,60 @@
+.TH XL-DESK 1 2015-08-05 20150805 xl-desk
+.SH NAME
+ xl-desk
+.SH COPYRIGHT
+ By Kyle Sallee in 2015 xl-desk-add was copyrighted.
+.SH DESCRIPTION
+ A    desk window position and proportions and
+ the  root window position and proportions concur.
+ As a root window substitute  the desk window does not suffice.
+ During desk interaction only the desk window       is mapped.
+.PP
+ To minimize root window clutter
+ to the desk window;           windows can be delegated.
+ To the root window; delegated windows can be released.
+.SH PARAMETERS
+ A desk name is mandatory.
+ By -n or by --name= a desk name is set.
+.PP
+ If a desk window is created
+ then the background pixel color can be set.
+ By -c or by --color= a hexadecimal integer 0xRRGGBB color is set.
+ By RR a 2 digit hexadecimal red   value is indicated.
+ By GG a 2 digit hexadecimal green value is indicated.
+ By BB a 2 digit hexadecimal blue  value is indicated.
+.PP
+ 4 command parameters are recognized.
+ In the following order commands execute:  dump;  adopt;  flip; return.
+ By -a or by --adopt  the beneath pointer window          is   adopted.
+ By -d or by --dump   the desk            window  content is  released.
+ By -f or by --flip   the root and desk   windows content is exchanged.
+ By -r or by --return to the root window; desk    content is      sent.
+.PP
+ During command return the desk window is mapped.
+ Root window content is obscured.
+ Interaction is anticipated.
+ By the pointer primary   button  press; the window is released.
+ By the pointer wheel     buttons press; windows raise and lower.
+ By the pointer alternate button  press; and
+ by any key press; interaction is terminated.
+.SH CONSIDERATIONS
+ To   a desk        root window owned windows only can be annexed.
+ From a desk to the root window only  windows      can be released.
+ A skip parameter is not supported.
+ By a window manager created window
+ if the root window is obscured
+ then by that window manager
+ a desk or virtual desk approximation is provided.
+.PP
+ If       desk content does not exist
+ then the desk process also does not exist.
+ While  a desk process exists only memory is consumed.
+ If     a desk process is terminated
+ then to the root window content is returned.
+.SH AUTHOR
+ Kyle Sallee
+.SH LICENSE
+ In the separate xl.7 manual page the software license is provided.
+.SH SEE ALSO
+.B man 1 xl
+.SH FORKERS

@@ -1,0 +1,47 @@
+.TH xl-focus-explicit 1 2015-08-05 20150805 xl-focus-explicit
+.SH NAME
+ xl-focus-explicit
+.SH COPYRIGHT
+ By Kyle Sallee in 2015 xl-focus-explicit was copyrighted.
+.SH DESCRIPTION
+ When to a new window the pointer moves
+ then by Xorg the input focus is changed.
+ However, the input focus is not locked.
+.PP
+ If by a program the input focus is locked
+ then when the pointer changes windows
+ by Xorg the input focus does not change.
+.PP
+ For very few software projects, such as firefox,
+ being granted input focus does not suffice.
+ On firefox's window if a focus lock does not exist
+ then firefox menus do not display.
+.PP
+ In considerably older firefox versions
+ a focus lock was not required.
+ Without a window manager;
+ those older versions ran as expected.
+.PP
+ Currently, by firefox and by some other programs
+ this ham handed window manager type supervision is required.
+ By an xl-focus-explicit process
+ the expected ham handed supervision is provided,
+ yet a window manager is not provided.
+.PP
+ A desktop environment process or
+ a window  manager     process can concurrently exist.
+.PP
+ By xl-focus-explicit the proper solution is not provided.
+ For the proper solution; bugged software, such as firefox,
+ should be fixed.
+ https://bugzilla.mozilla.org/show_bug.cgi?id=671277
+ At least since 20110713; the bug report has existed.
+.SH PARAMETERS
+.SH EXAMPLES
+.SH AUTHOR
+ Kyle Sallee
+.SH LICENSE
+ In the separate xl.7 manual page the software license is provided.
+.SH SEE ALSO
+.B man 1 xl
+.SH FORKERS

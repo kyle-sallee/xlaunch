@@ -1,0 +1,41 @@
+#!/bin/bash
+# In 2015 by Kyle Sallee; xl-flashplugin was copyrighted.
+
+#    Adobe Systems Incorporated and Kyle Sallee are not affiliated.
+# By Adobe Systems Incorporated;    Adobe Flash Player         is provied.
+# By Adobe Systems Incorporated; an Adobe Flash Player license is provied.
+# Only with                         Adobe Flash Player; the license applies.
+# A URL to webpage with a hyperlink that provides the license follows.
+# https://get.adobe.com/flashplayer/
+# By invoking this script; license tacit consent is implied.
+
+d=~/.mozilla/plugins
+f=libflashplayer.so
+
+if
+[ -f $d/$f ]
+then
+exit 0
+fi
+
+mkdir -p $d
+
+case $HOSTTYPE in
+ x86_64)Z=64;;
+      *)Z=32;;
+esac
+
+curl "https://get.adobe.com/flashplayer/download/?installer=Flash_Player_11.2_for_other_Linux_(.tar.gz)_${Z}-bit&standalone=1"|
+tr "'" "\n"|
+grep install_flash_player|
+xargs curl|
+tar -C $d -xzf - $f
+
+if
+pgrep	firefox	2>/dev/null
+then
+pkill	-9	firefox
+sleep	1
+fi
+
+firefox	about:plugins	&>/dev/null	&

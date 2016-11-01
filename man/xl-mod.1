@@ -1,0 +1,123 @@
+.TH XL-MOD 1 2015-08-05 20150805 xl-mod
+.SH NAME
+ xl-mod
+.SH COPYRIGHT
+ By Kyle Sallee in 2015 xl-mod was copyrighted.
+.SH VERNACULAR
+.SH PIXEL MODULO
+ Pixel   modulo is an integer.
+ For     each pixel an X and Y coordinates exist.
+ Without remainder by the modulo integer
+ where   both the X and Y coordinates can be divided
+ then    a modulo congruent coordinate exists.
+ The     default modulo is 4.
+ By      modulo congruent coordinates use
+ window  placement is expedited.
+ For     precise window placement modulo 1 is required.
+.SH WINDOW SKIP
+ When beneath pointer windows are discovered
+ as   many windows as specified
+ by   the window skip integer are ignored.
+ By   a window manager provided window
+ if   the root window is obscured
+ then a skip value may be useful.
+.SH IDLE DURATION
+ If    a key       is pressed
+ if    a button    is pressed
+ if    the pointer is moved
+ then  the idle timer resets.
+ After 5 idle seconds the process exits.
+.SH DESCRIPTION
+ The  in  pointer window becomes modifiable.
+ By   the pointer cursor the mode is indicated.
+ Four modes exist.
+ In   move mode the window                 moves.
+ In   size mode the window                 sizes.
+ In   free mode the pointer  only          moves.
+ In   aim  mode an  interior window can be selected.
+.PP
+ With a different anchor position
+ move and size effectiveness can improve.
+ In   free mode the anchor position is changed.
+ For  aim selection only
+ the  window and the pointer cursor must overlap.
+.PP
+ By   pressing 'a' only aim mode is entered.
+ If   aim mode is required
+ then rather than xl-mod
+ the  window manager provided functions aught to be used.
+.SH INTERACTION
+ By the pointer movement                    the window        is set.
+ By the key     space  bar press and
+ by the pointer button 3   press            the mode          is set.
+ By the pointer button 4   press            the window        raises.
+ By the pointer button 5   press            the window        lowers.
+ By the pointer button 1   press            the process        exits.
+ By the key     backspace  press to initial values the window is set.
+ By the key     a          aim mode                           is set.
+ By the key     1          press to value 1 the pixel  modulo is set.
+ By the key     2          press to value 2 the pixel  modulo is set.
+ By the key     4          press to value 4 the pixel  modulo is set.
+ By the key     8          press to value 8 the pixel  modulo is set.
+.PP
+ By   xl-mod a root window owned visible window is targeted.
+ If   Xorg is bare backed
+ then by xl-mod    the correct window is targeted.
+ If   an interior  window must be targeted
+ then a skip value or aim mode can be used.
+.PP
+ While in aim mode a different cursor appears.
+ While in aim mode the idle timer is suspended.
+.PP
+ In   aim mode the beneath pointer window is important.
+ By   pressing the Enter key or
+ by   pressing the primary pointer button
+ aim  mode is terminated.
+ By   pressing any other key or
+ by   pressing any other button
+ the  window aim changes.
+ In   aim mode when the aim changes
+ then program xl-info is invoked.
+ By   xl-info the aimed window name and
+ the  window identification number are displayed.
+ For  the aimed window a thick border width is activated.
+ When aim changes to 0 pixels the border width is set.
+.SH PROGRESS
+ Industry standard display sizes exist.
+ 320x200,   320, 240, 640,480, 800,600, 1280,720, 1024,768,
+ 1280,1024, 1920,1080, are a few common sizes.
+ Rather than manually attempt to configure an industry sized window;
+ window size can be automatically progressed.
+ If     the maximum displayable window size is achieved
+ then   size 64,64 is set.
+ Then   forward progress can resume.
+.SH PARAMETERS
+ By -c or by --color=  to the hexadecimal value the border color is set.
+ By -l or by --lower   the window                            is lowered.
+ By -m or by --modulo= to the integer value the pixel modulo     is set.
+ By -o or by --over    the override_redirect flag            is toggled.
+ By -p or by --prog    window size                           progresses.
+ By -r or by --raise   the window                            is lowered.
+ By -s or by --skip=   followed by an integer and windows   are ignored.
+ By -t or by --time    followed by an integer the duration       is set.
+ By -w or by --width=  the border width                          is set.
+.PP
+ For the following commands; additional interaction does not become:
+ lower; over; prog; raise.
+.SH DISCOVERY
+ For    height or for width
+ if     less than        32 pixels      is specified
+ then   to size       32x32; the window is  sized.
+ Beyond the root window visible area
+ if     a window exists
+ then   to coordinates 0x0;  the window is  moved.
+ At     xl-mod termination
+ all    microscopic and all misplaced
+ root   delegated windows               are fixed.
+.SH AUTHOR
+ Kyle Sallee
+.SH LICENSE
+ In the separate xl.7 manual page the software license is provided.
+.SH SEE ALSO
+.B man 1 xl
+.SH FORKERS

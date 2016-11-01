@@ -1,0 +1,55 @@
+.TH XL-SIRE 1 2015-08-05 20150805 xl-sire
+.SH NAME
+ xl-sire
+.SH COPYRIGHT
+ By Kyle Sallee in 2015 xl-sire was copyrighted.
+.SH DESCRIPTION
+ By xl-sire an InputOnly window is created.
+ To a hand the cursor changes.
+ For as many as 5 seconds input is awaited.
+ If input is received and
+ if one or more programs can be sired
+ then       the programs are    sired and xl-sire exits.
+ If the timeout elapses
+ and a program could not be sired
+ then file /etc/xl is displayed.
+.PP
+ Configuration file      /etc/xl can be used.
+ Configuration file ~/.config/xl is preferred.
+ The word "sire" prefixed lines only are salient.
+.PP
+ While xl-sire runs, non matching input is discarded.
+ If a pointer button is pressed then xl-sire exits.
+ If a pointer        is moved   then xl-sire exits.
+.PP
+ By single key presses; multiple process can be sired.
+ To other clients the key presses are not reported.
+.PP
+ By sire; keys are not grabbed.
+ When processes are sired the sire process exits.
+ Any key assignment is safe.
+ For example, without modifier keys
+ by the space bar and by the enter key
+ processes can be sired.
+ When the xl-sire process does not exist;
+ then from the space bar
+ and  from the enter key
+ expected behavior becomes.
+.PP
+ If   by xl-grab a key is grabbed
+ then by sire that key can be reassigned.
+ For example, if by by xl-grab the menu key is grabbed
+ then when the menu key is pressed
+ xl-sire is launched.
+.PP
+ By xl-sire an InputOnly window is created.
+ xl-sire can be concurrently launched.
+ However, if an xl-sire InputOnly window exists
+ then the the new xl-sire process exits.
+.SH AUTHOR
+ Kyle Sallee
+.SH LICENSE
+ In the separate xl.7 manual page the software license is provided.
+.SH SEE ALSO
+.B man 1 xl
+.SH FORKERS

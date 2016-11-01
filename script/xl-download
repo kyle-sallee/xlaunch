@@ -1,0 +1,23 @@
+#!/bin/bash
+# In 2015 by Kyle Sallee; xl-download was copyrighted.
+
+while
+A=$(
+dialog	--backtitle	"xl"\
+	--title		"Pre-compiled Data Download Menu"\
+	--cancel-label	"Exit"\
+	--ok-label	"Install"\
+	--no-collapse\
+	--stdout\
+	--menu		"\
+To highlight; arrow keys press.
+to select;    enter key  press."\
+	0 70 0\
+	corefonts		"for font andalemo.ttf through webdings.ttf"\
+	firefox			"for browsing the world wide web"\
+	flashplugin		"for web browser games and streaming video"\
+	google-talkplugin	"for voice/video telephone calls and chat"
+)
+do
+xl-$A
+done

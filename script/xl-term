@@ -1,0 +1,14 @@
+#!/bin/bash
+# In 2015 by Kyle Sallee copyrighted.
+  if [ -x /usr/bin/urxvt  ];then exec urxvt  -rv +sb -b 0 -fn 8x13 "$@"
+elif [ -x /usr/bin/uxterm ];then exec uxterm -rv -bd blue "$@"
+fi
+echo "urxvt  is not installed." 1>&2
+echo "uxterm is not installed." 1>&2
+echo "An installed terminal emulation program is required." 1>&2
+echo "In the PATH environment variable if ~/bin exists and" 1>&2
+echo "if ~/bin/xl-term exists then ~/bin/xl-term is invoked." 1>&2
+echo "File ~/.config/xl can be modified." 1>&2
+echo "File ~/bin/xlterm can be modified." 1>&2
+echo "$0 must not be modified." 1>&2
+exit 1
